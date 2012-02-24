@@ -10,10 +10,8 @@ Example Usage
 1. Build standalone version with 'lein ubuerjar'
 2. From the command line enter 'java -jar quote-downloader-1.0.0-standalone.jar'
    followed by one or more stock symbols.
-
-* $ java -jar quote-downloader-1.0.0-standalone.jar goog aapl
-
-3. For each symbol you will create a symbol.csv file with the historical data
+3. For example, java -jar quote-downloader-1.0.0-standalone.jar goog aapl
+4. For each symbol passed as a parameter you will create a symbol.csv file with the historical data
    for that symbol
 
 Comment
