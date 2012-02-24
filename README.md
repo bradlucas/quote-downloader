@@ -1,7 +1,7 @@
 quote-downloader
 ========================================
 
-A simple yahoo quote downloader. Described in the article http://beaconhill.com/solutions/kb/clojure/reading-files-in-clojure.html.
+A simple yahoo quote downloader described in the article at http://beaconhill.com/solutions/kb/clojure/reading-files-in-clojure.html.
 
 
 Example Usage
@@ -11,15 +11,21 @@ Example Usage
 2. From the command line enter 'java -jar quote-downloader-1.0.0-standalone.jar'
    followed by one or more stock symbols.
 
-   $ java -jar quote-downloader-1.0.0-standalone.jar goog aapl
+* $ java -jar quote-downloader-1.0.0-standalone.jar goog aapl
 
 3. For each symbol you will create a symbol.csv file with the historical data
    for that symbol
 
+Comment
+========================================
+
+Currently there is no error checking for valid symbols so for now ony put in valid symbols.
+
+
 Change Log
 ========================================
 
-* Version 1.0.0.0
+* Version 1.0.0
 
 
 Copyright and License
