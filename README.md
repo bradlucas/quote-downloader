@@ -17,7 +17,7 @@ Example Usage
 Comment
 ========================================
 
-Currently there is no error checking for valid symbols so for now ony put in valid symbols.
+Currently there is no error checking for valid symbols so for now only put in valid symbols.
 
 
 Change Log
