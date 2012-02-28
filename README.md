@@ -7,7 +7,7 @@ A simple yahoo quote downloader described in the article at http://beaconhill.co
 Example Usage
 ========================================
 
-1. Build standalone version with 'lein ubuerjar'
+1. Build standalone version with 'lein uberjar'
 2. From the command line enter 'java -jar quote-downloader-1.0.0-standalone.jar'
    followed by one or more stock symbols.
 3. For example, java -jar quote-downloader-1.0.0-standalone.jar goog aapl
