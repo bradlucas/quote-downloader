@@ -8,10 +8,13 @@
 (defn download-historical-quotes [sym]
   (let [url (build-url sym)
         filename (str sym ".csv")]
-    (with-open [rdr (io/reader url)
-                wrt (io/writer filename)]
-      (doseq [line (line-seq rdr)]
-        (.write wrt (str line "\n"))))))
+    (try 
+      (with-open [rdr (io/reader url)
+                  wrt (io/writer filename)]
+        (doseq [line (line-seq rdr)]
+          (.write wrt (str line "\n")))
+        (println (format "%s" sym)))
+      (catch Exception e (println (format "Error downloading '%s'" sym))))))
 
 (defn print-usage []
   (println "quote-downloader SYMBOL"))
