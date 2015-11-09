@@ -23,7 +23,7 @@
   "Process a list of symbols sequentially"
   [lst]
   (doseq [sym lst]
-   (download-historical-quotes sym)))
+    (download-historical-quotes sym)))
 
 (defn process-symbols-parallel 
   "Process a list of symbols in parallel
@@ -58,7 +58,6 @@
   (let [[opts args summary]
         ;; https://github.com/bradlucas/cmdline/blob/master/src/cmdline/core.clj
         (cli args
-             ["-l" "--log" "Enable log messages" :flag true :default true]
              ["-p" "--parallel" "Parrallel loading" :flag true :default true]
              ["-f" "--file-symbols" "File containing symbols to load (overloads symbols passed as args)"]
              )]
@@ -66,13 +65,11 @@
     (if (and (not (:file-symbols opts)) (not (seq args)))
       (print-usage summary)
       (do
-        (let [log (:log opts)
-              parallel (:parallel opts)
+        (let [parallel (:parallel opts)
               symbols (if (:file-symbols opts) (load-symbol-file (:file-symbols opts)) args)]
-          (println "log:" log)
-          (println "parallel:" opts)
-          (println "symbols:" symbols)
-          (time (process-symbols-parallel symbols))
+          (let [time-msg (with-out-str (time (if parallel (process-symbols-parallel symbols) (process-symbols-sequential symbols))))]
+            (println time-msg)
+            )
           )
         )
       )
