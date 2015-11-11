@@ -51,7 +51,7 @@
   "Read a file of symbols and return them in a sequence"
   [filename]
   (with-open [rdr (io/reader filename)]
-    (doall (line-seq rdr))))
+    (filter #(not (empty? %)) (doall (line-seq rdr)))))
 
 (defn -main 
   [& args]
