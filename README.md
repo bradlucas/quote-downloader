@@ -1,6 +1,6 @@
 quote-downloader
 
-[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.blucas/quote-downloader.svg)](https://clojars.org/org.clojars.blucas/quote-downloader)
+[![Clojars Project](https://img.shields.io/clojars/v/com.bradlucas/quote-downloader.svg)](https://clojars.org/com.bradlucas/quote-downloader)
 
 A simple yahoo quote downloader described in the article at http://beaconhill.com/solutions/kb/clojure/reading-files-in-clojure.html.
 
